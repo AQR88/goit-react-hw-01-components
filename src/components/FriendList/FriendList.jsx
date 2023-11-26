@@ -1,15 +1,24 @@
 import friends from './friends.json';
-
-/* <FriendList friends={friends} />; */
+import css from './friends.module.css';
 
 function List({ friends }) {
   return (
-    <ul class="friend-list">
+    <ul className={css.list}>
       {friends.map(({ avatar, name, isOnline, id }) => (
-        <li class="item" key={id}>
-          <span class="status">{isOnline}</span>
-          <img class="avatar" src={avatar} alt="User avatar" width="48" />
-          <p class="name">{name}</p>
+        <li className={css.item} key={id}>
+          <span
+            className={css.status}
+            style={{ backgroundColor: isOnline ? 'green' : 'red' }}
+          >
+            {isOnline}
+          </span>
+          <img
+            className={css.avatar}
+            src={avatar}
+            alt="User avatar"
+            width="48"
+          />
+          <p className={css.name}>{name}</p>
         </li>
       ))}
     </ul>

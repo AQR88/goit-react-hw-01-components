@@ -1,14 +1,15 @@
 import data from './data.json';
+import css from './statistics.module.css';
 
 function StatisticElem({ title, stats }) {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
-      <ul>
+    <section className={css.statistics}>
+      <h2 className={css.title}>{title}</h2>
+      <ul className={css.list}>
         {stats.map(elem => (
-          <li className="item" key={elem.id}>
-            <span className="label">{elem.label}</span>
-            <span className="percentage">{elem.percentage}</span>
+          <li className={css.item} key={elem.id}>
+            <span className={css.label}>{elem.label}</span>
+            <span className={css.percentage}>{elem.percentage}%</span>
           </li>
         ))}
       </ul>
@@ -17,5 +18,5 @@ function StatisticElem({ title, stats }) {
 }
 
 export default function Statistics() {
-  return <StatisticElem title="Upload stats" stats={data} />;
+  return <StatisticElem title="UPLOAD STATS" stats={data} />;
 }
