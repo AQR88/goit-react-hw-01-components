@@ -1,17 +1,21 @@
 import data from './data.json';
 
-function statisticELem ({title,data}) {
-  return map.stats(elem => (
-    <>
-      <section class="statistics">
-        <h2 class="title">{title}</h2>
-        <ul>
-          <li class="item" key={elem.id}>
-            <span class="label">{elem.label}</span>
-            <span class="percentage">{elem.percentage}</span>
+function StatisticElem({ title, stats }) {
+  return (
+    <section className="statistics">
+      <h2 className="title">{title}</h2>
+      <ul>
+        {stats.map(elem => (
+          <li className="item" key={elem.id}>
+            <span className="label">{elem.label}</span>
+            <span className="percentage">{elem.percentage}</span>
           </li>
-        </ul>
-      </section>
-    </>
-  ));
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export default function Statistics() {
+  return <StatisticElem title="Upload stats" stats={data} />;
 }

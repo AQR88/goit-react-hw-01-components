@@ -1,10 +1,11 @@
-import Profile from "./Profile/profile";
-
+import Profile from './Profile/profile';
+import Statistics from './Statistics/statistic';
 
 export const App = () => {
   return (
     <div>
-      <Profile/>
+      <Profile />
+      <Statistics />
     </div>
   );
 };
