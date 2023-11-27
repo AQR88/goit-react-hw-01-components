@@ -30,9 +30,11 @@
 
 .label {
   font-size: 15px;
+  color: #fff;
 }
 
 .percentage {
   font-size: 22px;
   font-weight: bold;
+  color: #fff;
 }
