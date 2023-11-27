@@ -1,0 +1,28 @@
+.history {
+  width: 700px;
+  background-color: #fff;
+  margin: 25px auto;
+  border: 2px solid rgb(186, 180, 180);
+}
+
+.head {
+  background-color: rgba(12, 112, 206, 0.878);
+}
+.tbody {
+  border: 2px solid rgb(186, 180, 180);
+}
+
+.tr {
+  height: 40px;
+}
+
+.title {
+  font-size: 15px;
+  color: #fff;
+}
+
+.td {
+  text-align: center;
+  border: 2px solid rgb(186, 180, 180);
+  text-transform: capitalize;
+}
