@@ -1,7 +1,8 @@
-import user from './user.json';
 import css from './profile.module.css';
 
-function UserCard({ username, tag, location, avatar, stats }) {
+export default function Profile(user) {
+  const { username, tag, location, avatar, stats } = user;
+
   return (
     <>
       <div className={css.profile}>
@@ -30,14 +31,14 @@ function UserCard({ username, tag, location, avatar, stats }) {
   );
 }
 
-export default function Profile() {
-  return (
-    <UserCard
-      username={user.username}
-      tag={user.tag}
-      location={user.location}
-      avatar={user.avatar}
-      stats={user.stats}
-    />
-  );
-}
+// export default function Profile() {
+//   return (
+//     <UserCard
+//       username={user.username}
+//       tag={user.tag}
+//       location={user.location}
+//       avatar={user.avatar}
+//       stats={user.stats}
+//     />
+//   );
+// }

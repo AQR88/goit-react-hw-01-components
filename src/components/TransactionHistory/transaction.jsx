@@ -1,7 +1,6 @@
-import transactions from './transactions.json';
 import css from './transactions.module.css';
 
-function HistorySection({ items }) {
+export default function TransactionHistory({ items }) {
   return (
     <>
       <table className={css.history}>
@@ -30,6 +29,6 @@ function HistorySection({ items }) {
   );
 }
 
-export default function TransactionHistory() {
-  return <HistorySection items={transactions} />;
-}
+// export default function TransactionHistory() {
+//   return <HistorySection items={transactions} />;
+// }
