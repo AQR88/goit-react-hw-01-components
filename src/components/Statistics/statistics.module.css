@@ -12,6 +12,7 @@
   margin: 0;
   font-weight: bold;
   padding: 20px;
+  text-transform: uppercase;
 }
 .list {
   display: flex;
